@@ -1,0 +1,20 @@
+{
+  "name": "backend-auction",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/backend/auction/src",
+  "projectType": "library",
+  "tags": ["type:feature", "scope:backend"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/backend/auction",
+        "tsConfig": "libs/backend/auction/tsconfig.lib.json",
+        "packageJson": "libs/backend/auction/package.json",
+        "main": "libs/backend/auction/src/index.ts",
+        "assets": ["libs/backend/auction/*.md"]
+      }
+    }
+  }
+}

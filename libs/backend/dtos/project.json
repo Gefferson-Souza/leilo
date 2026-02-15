@@ -1,0 +1,20 @@
+{
+  "name": "backend-dtos",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/backend/dtos/src",
+  "projectType": "library",
+  "tags": ["type:data", "scope:shared"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/backend/dtos",
+        "tsConfig": "libs/backend/dtos/tsconfig.lib.json",
+        "packageJson": "libs/backend/dtos/package.json",
+        "main": "libs/backend/dtos/src/index.ts",
+        "assets": ["libs/backend/dtos/*.md"]
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@leilao-go/shared-kernel": ["libs/shared/kernel/src/index.ts"],
+      "@leilao-go/shared-infrastructure": [
+        "libs/shared/infrastructure/src/index.ts"
+      ],
+      "@leilao-go/backend-ingestion": ["libs/backend/ingestion/src/index.ts"],
+      "@leilao-go/backend-auction": ["libs/backend/auction/src/index.ts"],
+      "@leilao-go/backend-catalog": ["libs/backend/catalog/src/index.ts"],
+      "@leilao-go/backend-valuation": ["libs/backend/valuation/src/index.ts"],
+      "@leilao-go/backend-dtos": ["libs/backend/dtos/src/index.ts"]
+    },
+    "strict": true,
+    "noImplicitAny": true
+  },
+  "exclude": ["node_modules", "tmp"]
+}

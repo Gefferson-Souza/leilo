@@ -1,0 +1,20 @@
+{
+  "name": "backend-catalog",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/backend/catalog/src",
+  "projectType": "library",
+  "tags": ["type:feature", "scope:backend"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/backend/catalog",
+        "tsConfig": "libs/backend/catalog/tsconfig.lib.json",
+        "packageJson": "libs/backend/catalog/package.json",
+        "main": "libs/backend/catalog/src/index.ts",
+        "assets": ["libs/backend/catalog/*.md"]
+      }
+    }
+  }
+}

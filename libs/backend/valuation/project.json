@@ -1,0 +1,20 @@
+{
+  "name": "backend-valuation",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/backend/valuation/src",
+  "projectType": "library",
+  "tags": ["type:feature", "scope:backend"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/backend/valuation",
+        "tsConfig": "libs/backend/valuation/tsconfig.lib.json",
+        "packageJson": "libs/backend/valuation/package.json",
+        "main": "libs/backend/valuation/src/index.ts",
+        "assets": ["libs/backend/valuation/*.md"]
+      }
+    }
+  }
+}
