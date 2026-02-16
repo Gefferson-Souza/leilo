@@ -11,7 +11,7 @@ import { BackendAuctionModule } from '@leilao-go/backend-auction';
 import { BackendCatalogModule } from '@leilao-go/backend-catalog';
 import { BackendValuationModule } from '@leilao-go/backend-valuation';
 // Shared Modules
-import { SharedInfrastructureModule } from '@leilao-go/shared-infrastructure';
+import { DatabaseModule } from '@leilao-go/backend-infrastructure';
 import { BackendDtosModule } from '@leilao-go/backend-dtos';
 
 @Module({
@@ -23,7 +23,7 @@ import { BackendDtosModule } from '@leilao-go/backend-dtos';
     EventEmitterModule.forRoot(),
 
     // Shared
-    SharedInfrastructureModule,
+    DatabaseModule,
     BackendDtosModule,
 
     // Features

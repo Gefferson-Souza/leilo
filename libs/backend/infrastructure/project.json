@@ -1,0 +1,20 @@
+{
+  "name": "backend-infrastructure",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/backend/infrastructure/src",
+  "projectType": "library",
+  "tags": ["type:util", "scope:shared"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/backend/infrastructure",
+        "tsConfig": "libs/backend/infrastructure/tsconfig.lib.json",
+        "packageJson": "libs/backend/infrastructure/package.json",
+        "main": "libs/backend/infrastructure/src/index.ts",
+        "assets": ["libs/backend/infrastructure/*.md"]
+      }
+    }
+  }
+}

@@ -16,14 +16,14 @@
     "baseUrl": ".",
     "paths": {
       "@leilao-go/shared-kernel": ["libs/shared/kernel/src/index.ts"],
-      "@leilao-go/shared-infrastructure": [
-        "libs/shared/infrastructure/src/index.ts"
-      ],
       "@leilao-go/backend-ingestion": ["libs/backend/ingestion/src/index.ts"],
       "@leilao-go/backend-auction": ["libs/backend/auction/src/index.ts"],
       "@leilao-go/backend-catalog": ["libs/backend/catalog/src/index.ts"],
       "@leilao-go/backend-valuation": ["libs/backend/valuation/src/index.ts"],
-      "@leilao-go/backend-dtos": ["libs/backend/dtos/src/index.ts"]
+      "@leilao-go/backend-dtos": ["libs/backend/dtos/src/index.ts"],
+      "@leilao-go/backend-infrastructure": [
+        "libs/backend/infrastructure/src/index.ts"
+      ]
     },
     "strict": true,
     "noImplicitAny": true
