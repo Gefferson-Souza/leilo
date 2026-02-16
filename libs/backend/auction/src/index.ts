@@ -4,3 +4,6 @@ export * from './lib/entities/auctioneer.entity';
 export * from './lib/entities/lot.entity';
 export * from './lib/enums/auction-status.enum';
 export * from './lib/enums/lot-status.enum';
+export * from './lib/repositories/auction.repository';
+export * from './lib/repositories/auctioneer.repository';
+export * from './lib/repositories/lot.repository';
