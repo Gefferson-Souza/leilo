@@ -9,10 +9,22 @@ import { AuctionRepository } from './repositories/auction.repository';
 import { AuctioneerRepository } from './repositories/auctioneer.repository';
 import { LotRepository } from './repositories/lot.repository';
 
+import { AuctionService } from './services/auction.service';
+
 @Module({
   imports: [TypeOrmModule.forFeature([Auction, Auctioneer, Lot])],
   controllers: [],
-  providers: [AuctionRepository, AuctioneerRepository, LotRepository],
-  exports: [AuctionRepository, AuctioneerRepository, LotRepository],
+  providers: [
+    AuctionRepository,
+    AuctioneerRepository,
+    LotRepository,
+    AuctionService,
+  ],
+  exports: [
+    AuctionRepository,
+    AuctioneerRepository,
+    LotRepository,
+    AuctionService,
+  ],
 })
 export class BackendAuctionModule {}

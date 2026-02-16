@@ -32,6 +32,13 @@ export class AuctionRepository {
     });
   }
 
+  async findById(id: string): Promise<Auction | null> {
+    return this.repository.findOne({
+      where: { id },
+      relations: ['lots'],
+    });
+  }
+
   async save(auction: Auction): Promise<Auction> {
     return this.repository.save(auction);
   }

@@ -7,3 +7,6 @@ export * from './lib/enums/lot-status.enum';
 export * from './lib/repositories/auction.repository';
 export * from './lib/repositories/auctioneer.repository';
 export * from './lib/repositories/lot.repository';
+export * from './lib/services/auction.service';
+export * from './lib/dtos/create-auction.dto';
+export * from './lib/dtos/create-lot.dto';
