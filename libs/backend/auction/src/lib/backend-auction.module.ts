@@ -11,9 +11,11 @@ import { LotRepository } from './repositories/lot.repository';
 
 import { AuctionService } from './services/auction.service';
 
+import { AuctionController } from './controllers/auction.controller';
+
 @Module({
   imports: [TypeOrmModule.forFeature([Auction, Auctioneer, Lot])],
-  controllers: [],
+  controllers: [AuctionController],
   providers: [
     AuctionRepository,
     AuctioneerRepository,

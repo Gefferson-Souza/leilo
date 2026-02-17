@@ -7,6 +7,7 @@ import { CreateAuctionDto } from '../dtos/create-auction.dto';
 import { CreateLotDto } from '../dtos/create-lot.dto';
 import { Auction } from '../entities/auction.entity';
 import { Lot } from '../entities/lot.entity';
+import { AuctionStatus } from '../enums/auction-status.enum';
 
 @Injectable()
 export class AuctionService {
@@ -76,9 +77,6 @@ export class AuctionService {
         // Update local object for return
         existingLot.currentBid = newBid;
       }
-
-      // Update other fields? Logic says "If exists: Update currentBid. Check if bid changed."
-      // So no other fields are mandated to update.
       return existingLot;
     }
 
@@ -92,5 +90,25 @@ export class AuctionService {
     });
 
     return newLot;
+  }
+
+  async findAll(status?: AuctionStatus): Promise<Auction[]> {
+    return this.auctionRepository.findAll(status);
+  }
+
+  async findOne(id: string): Promise<Auction> {
+    const auction = await this.auctionRepository.findById(id);
+    if (!auction) {
+      throw new NotFoundException(`Auction with ID ${id} not found`);
+    }
+    return auction;
+  }
+
+  async findLots(auctionId: string): Promise<Lot[]> {
+    const auction = await this.auctionRepository.findById(auctionId);
+    if (!auction) {
+      throw new NotFoundException(`Auction with ID ${auctionId} not found`);
+    }
+    return this.lotRepository.findByAuctionId(auctionId);
   }
 }

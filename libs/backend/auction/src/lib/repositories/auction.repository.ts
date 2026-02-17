@@ -32,6 +32,14 @@ export class AuctionRepository {
     });
   }
 
+  async findAll(status?: AuctionStatus): Promise<Auction[]> {
+    const where = status ? { status } : {};
+    return this.repository.find({
+      where,
+      relations: ['auctioneer'],
+    });
+  }
+
   async findById(id: string): Promise<Auction | null> {
     return this.repository.findOne({
       where: { id },
