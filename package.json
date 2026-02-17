@@ -52,11 +52,13 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "@nestjs/axios": "^4.0.1",
     "@nestjs/common": "^11.0.0",
     "@nestjs/config": "^4.0.3",
     "@nestjs/core": "^11.0.0",
     "@nestjs/event-emitter": "^3.0.1",
     "@nestjs/platform-express": "^11.0.0",
+    "@nestjs/schedule": "^6.1.1",
     "@nestjs/typeorm": "^11.0.0",
     "axios": "^1.6.0",
     "cheerio": "^1.2.0",
